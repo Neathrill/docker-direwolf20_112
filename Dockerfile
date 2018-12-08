@@ -17,7 +17,7 @@ USER minecraft
 RUN mkdir -p /minecraft/world && \
     wget -O ${SERVER_FILE} ${URL} && \
     unzip ${SERVER_FILE} && \
-    chmod u+x FTBInstall.sh ServerStart.sh CheckEula.sh && \
+    chmod +rwx FTBInstall.sh ServerStart.sh CheckEula.sh && \
     sed -i '2i /bin/sh /minecraft/CheckEula.sh' /minecraft/ServerStart.sh && \
     /minecraft/FTBInstall.sh
 
