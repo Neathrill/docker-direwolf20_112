@@ -2,7 +2,7 @@
 FROM openjdk:8-jre-alpine
 
 ENV URL="https://www.feed-the-beast.com/projects/ftb-presents-direwolf20-1-12/files/2637279/download" \
-    SERVER_FILE="FTB+Presents+Direwolf20+1.12-1.12.2-2.4.0-Server.zip" \
+    SERVER_FILE="FTB+Presents+Direwolf20+1.12-1.12.2-2.4.0-Server" \
     SERVER_PORT=25565
 
 WORKDIR /minecraft
