@@ -25,6 +25,7 @@ else
     echo "  https://account.mojang.com/documents/minecraft_eula"
     echo "by adding ' -e EULA=TRUE' after 'docker run'"
     echo ""
+    echo "eula=$EULA" >> /minecraft/eula.txt
     > /minecraft/eula.txt
     exit 1
 fi
