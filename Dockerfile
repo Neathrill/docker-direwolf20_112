@@ -19,5 +19,5 @@ RUN apk --no-cache add wget && \
 
 EXPOSE ${SERVER_PORT}
 VOLUME ["/minecraft/world", "/minecraft/backups"]
-CMD echo eula=true > /minecraft/eula.txt && \
+CMD echo "eula=true" > /minecraft/eula.txt && \
     /minecraft/ServerStart.sh
