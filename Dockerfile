@@ -15,8 +15,7 @@ RUN apk --no-cache add wget && \
     unzip ${SERVER_FILE} && \
     chmod +rwx FTBInstall.sh ServerStart.sh CheckEula.sh && \
     sed -i '2i /bin/sh /minecraft/CheckEula.sh' /minecraft/ServerStart.sh && \
-    /minecraft/FTBInstall.sh && \ 
-    sed -i 's/false/true/g' /minecraft/eula.txt
+    /minecraft/FTBInstall.sh
 
 EXPOSE ${SERVER_PORT}
 VOLUME ["/minecraft/world", "/minecraft/backups"]
