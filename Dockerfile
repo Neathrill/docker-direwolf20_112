@@ -9,12 +9,8 @@ WORKDIR /minecraft
 
 USER root
 COPY CheckEula.sh /minecraft/
-RUN adduser -D minecraft && \
-    apk --no-cache add wget && \
-    chown -R minecraft:minecraft /minecraft
-
-USER minecraft
-RUN mkdir -p /minecraft/world && \
+RUN apk --no-cache add wget && \
+    mkdir -p /minecraft/world && \
     wget -O ${SERVER_FILE} ${URL} && \
     unzip ${SERVER_FILE} && \
     chmod +rwx FTBInstall.sh ServerStart.sh CheckEula.sh && \
