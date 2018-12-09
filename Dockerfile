@@ -1,4 +1,4 @@
-f# Copyright 2015-2017 Sean Nelson <audiohacked@gmail.com>
+# Copyright 2015-2017 Sean Nelson <audiohacked@gmail.com>
 FROM openjdk:8-jre-alpine
 
 ENV URL="https://www.feed-the-beast.com/projects/ftb-presents-direwolf20-1-12/files/2637279/download" \
